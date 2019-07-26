@@ -1,39 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-list',
-  templateUrl: 'list.page.html',
-  styleUrls: ['list.page.scss']
+  selector: "app-list",
+  templateUrl: "list.page.html",
+  styleUrls: ["list.page.scss"]
 })
 export class ListPage implements OnInit {
-  private selectedItem: any;
-  private icons = [
-    'flask',
-    'wifi',
-    'beer',
-    'football',
-    'basketball',
-    'paper-plane',
-    'american-football',
-    'boat',
-    'bluetooth',
-    'build'
-  ];
-  public items: Array<{ title: string; note: string; icon: string }> = [];
-  constructor() {
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
-  }
+  slideOpts = {
+    initialSlide: 0,
+    slidesPerView: 2.5,
+    spaceBetween: 5,
+    speed: 400
+  };
 
-  ngOnInit() {
-  }
-  // add back when alpha.4 is out
-  // navigate(item) {
-  //   this.router.navigate(['/list', JSON.stringify(item)]);
-  // }
+  items = [
+    {
+      src: "assets/images/photo1.jpeg"
+    },
+
+    {
+      src: "assets/images/photo5.jpg"
+    },
+
+    {
+      src: "assets/images/photo7.jpg"
+    },
+    {
+      src: "assets/images/photo8.jpg"
+    },
+    {
+      src: "assets/images/photo9.jpg"
+    },
+
+    {
+      src: "assets/images/photo11.jpg"
+    }
+  ];
+  ngOnInit() {}
 }

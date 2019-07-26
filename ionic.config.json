@@ -1,5 +1,7 @@
 {
   "name": "responsive_image_slider",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
